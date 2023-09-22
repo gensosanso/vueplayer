@@ -6,12 +6,16 @@ import {
   faPause,
   faStepForward,
   faStepBackward,
-  faTimes
+  faTimes,
+  faDownload,
+  faHeart,
+  faMusic,
+  faRedoAlt
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faPlay, faPause, faStepForward, faStepBackward, faTimes, faGithub);
+library.add(faPlay, faPause, faStepForward, faStepBackward, faTimes, faGithub,faDownload,faHeart,faMusic,faRedoAlt);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

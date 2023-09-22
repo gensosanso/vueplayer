@@ -14,7 +14,7 @@
             :show-text="false"
             class="progress-bar-wrapper"
             v-bind:percent="current.percent"
-            :color="['#df83f1', '#82279f', '#53cfe0']"
+            :color="['white', 'gray', 'black']"
           />
           <div class="timer">
             <p class="start">{{ currentlyTimer }}</p>
@@ -36,21 +36,33 @@
           <button class="next" @click="next" v-if="songs.length > 1">
             <font-awesome-icon icon="step-forward" />
           </button>
+          <button class="play">
+            <font-awesome-icon icon="download" />
+          </button>
+          <button class="play">
+            <font-awesome-icon icon="redo-alt" />
+          </button>
+          <button class="play">
+            <font-awesome-icon icon="music" />
+          </button>
         </div>
         <div class="footer">
-          <p>Powered by Soundcloud</p>
-          <a
+          <!-- <p>Powered by Soundcloud</p> -->
+          <!-- <a
             href="https://github.com/Davigl/vue-music-player"
             alt="Give a Star"
             title="Give a Star"
           >
             <font-awesome-icon :icon="['fab', 'github']" />
-          </a>
+          </a> -->
         </div>
       </section>
     </main>
     <section class="playlist">
-      <h3>Now Playing <span> 🎵 </span></h3>
+      <h3> 
+        Now Playing 
+        <!-- <span> 🎵 </span> -->
+      </h3>
       <ul>
         <li v-for="song in songs" :key="song.src" class="song">
           <div class="cover-playlist">
@@ -63,7 +75,7 @@
             <p class="artist">{{ song.artist }}</p>
             <KProgress
               v-if="song.isPlaying"
-              :color="['#df83f1', '#82279f', '#53cfe0']"
+              :color="['white', 'gray', 'black']"
               :show-text="false"
               class="progress-bar-wrapper"
               v-bind:percent="song.percent"
